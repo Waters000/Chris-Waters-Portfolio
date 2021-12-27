@@ -329,6 +329,7 @@ body p {
 }
 
 .trainer {
+    display: wrap;
     margin: 20px;
     background: var(--secondary-color);
     color: var(--primary-color);
@@ -336,7 +337,14 @@ body p {
 }
 
 .trainer img {
-    width: 100%;
+    width: 60%;
+    position: relative;
+    justify-content: center;
+    top: 20px;
+    left: 50px;
+    transform: rotate(-8deg);
+    max-height: 150px;
+    max-width: 150px;
    
 }
 
