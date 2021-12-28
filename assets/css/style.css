@@ -124,7 +124,7 @@ section {
 }
 .hero-cta{
     display: flex;
-    width: 65%;
+    width: 85%;
     justify-content: space-around;
     margin-top: -50px;
     color: rgb(0, 0, 0);
