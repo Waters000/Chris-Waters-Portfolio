@@ -65,10 +65,10 @@ header nav ul li a {
     font-size: 1.55vw;
 }
 
-header nav ul li a:hover {
+h1:hover, header nav ul li a:hover {
     background: var(--primary-color);
     color: var(--secondary-color);
-    border-radius: 15px;
+    border-radius: 0px;
     text-shadow: none;
 
 }
@@ -148,12 +148,15 @@ section {
 }
 .hero-cta h2 {
     font-style: italic;
-    font-size: 55px;
+    font-size: 30px;
     color: var(--primary-color);
 }
 
 body p {
     color:var(--tertiary-color);
+}
+.hero-image {
+    flex-wrap: wrap;
 }
 
 .web-experience {
@@ -202,15 +205,12 @@ body p {
 }
 .hero-form img {
    position: relative;
-   top: 10px;
+   top: 0px;
    left: -150px;
    height: auto;
    width: auto;
-   max-width: 200px;
-   max-height: 200px;
-}
-.hero-form button:hover {
-    background-color: var(--tertiary-color);
+   max-width: 120px;
+   max-height: 120px;
 }
 
 .hero-form h3 {
@@ -223,26 +223,6 @@ body p {
 }
 
 
-.form-input:focus {
-    background-color: rgba(255,255,255,1);
-    outline: none;
-}
-
-.hero-form label {
-    margin: 0 5px;
-}
-
-.hero-form button {
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 10px;
-}
-.intro h2 {
-   
-}
 
 .intro p {
     line-height: 1.7;
@@ -257,9 +237,7 @@ body p {
     background: var(--primary-color);
 }
 
-.steps h2 {
-    
-}
+
 
 .section-title {
     font-size: 48px;
@@ -331,7 +309,7 @@ body p {
     color: var(--secondary-color);
 }
 
-.trainers {
+.works {
    width: 100%;
    margin: 0 auto;
    display: flex;
@@ -339,7 +317,7 @@ body p {
    justify-content: space-around;
 }
 
-.trainer {
+.work {
     display: wrap;
     margin: 20px;
     background: var(--secondary-color);
@@ -347,7 +325,7 @@ body p {
     flex: 1;
 }
 
-.trainer img {
+.work img {
     width:100%;
     position: relative;
     justify-content: center;
@@ -356,10 +334,33 @@ body p {
     transform: rotate(-8deg);
     max-height: 180px;
     max-width: 300px;
-   
 }
 
-.trainer-bio {
+.work:hover {
+    transform: scale(1);
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 0px;
+    text-shadow: none;
+}
+
+.work img:hover{
+    transform: scale(1.2);
+    background: #fff;
+    color: var(--secondary-color);
+    border-radius: 0px;
+    text-shadow: none;
+}
+h2:hover, .education-info-section:hover, .web-experience h2:hover, .hero-form h3:hover {
+    transform: scale(1.2);
+}
+
+.hero-image img:hover {
+    transform: rotate(360deg);
+    transition: all 0.3s ease-in-out 0s; 
+}
+
+.work-bio {
     padding: 25px;
     line-height: 1.3;
 }
@@ -375,11 +376,15 @@ body p {
     justify-content: space-between;
 }
 .education-holder {
+    border-left: 3px solid var(--primary-color);
     flex: 2 70%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     
+}
+.education-title-holder {
+    padding-right: 15px;
 }
 
 .education-title {
@@ -427,17 +432,17 @@ body p {
     display: flex;
 }
 
-.trainer-bio h3 {
+.work-bio h3 {
     font-size: 28px;
 }
 
-.trainer-bio h4 {
+.work-bio h4 {
     font-weight: lighter;
     font-size: 22px;
     margin-bottom: 15px;
 }
 
-.trainer-bio p {
+.work-bio p {
     font-size: 17px;
 }
 
@@ -485,90 +490,9 @@ body p {
 .contact-info a {
     color: var(--primary-color);
 }
-.contact-form input, .contact-form textarea {
-    border: 1px solid var(--secondary-color);
-    display: block;
-    padding: 7px 15px;
-    font-size: 16px;
-    color: var(--secondary-color);
-    width: 100%;
-    margin-bottom: 15px;
-    margin-top: 5px;
-    border-radius: 10px;
-    background-color: rbga(255,255,255, 0.75);
-}
-.contact-form input:focus, .contact-form textarea:focus {
-    background-color: rgba(255,255,255, 1);
-}
-.step-text button {
-    width: 100%;
-    border: none;
-    background: var(--primary-color);
-    color: var(--secondary-color);
-    text-align: center;
-    padding: 15px 0;
-    font-size: 16px;
-    border-radius: 10px;
-}
-.contact-form button:hover {
-    color: var(--primary-color);
-    background: var(--tertiary-color);
-}
-
-.checkbox-wrapper input, .radio-wrapper input {
-    opacity: 0;
-}
 
 
-.checkbox-wrapper label, .radio-wrapper label {
-    position: relative;
-    left: 10px;
-    margin: 10px;
-    line-height: 1.6;
-}
 
-.checkbox-wrapper label::before, .radio-wrapper label::before {
-    content: "";
-    height: 20px;
-    width: 20px;
-    background: rbga(255,255,255, 0.75);
-    border: 1px solid var(--secondary-color);
-    position: absolute;
-    top: -4px;
-    left: -30px;
-}
-.radio-wrapper label::before {
-    border-radius: 50%;
-}
-.radio-wrapper label::after {
-    content: "";
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: var(--secondary-color);
-    position: absolute;
-    left: -29px;
-    top: -3px;
-    background-image: radial-gradient(circle, var(--tertiary-color), var(--secondary-color));
-}
-.checkbox-wrapper label::after {
-    content: "";
-    height: 6px;
-    width: 14px;
-    border-left: 2px solid var(--secondary-color);
-    border-bottom: 2px solid var(--secondary-color);
-    position: absolute;
-    left: -26px;
-    top: 1px;
-    transform: rotate(-58deg);
-}
-.checkbox-wrapper input + label::after, .radio-wrapper input + label::after {
-    content: none;
-}
-
-.checkbox-wrapper input:checked + label::after, .radio-wrapper input:checked +label::after {
-    content: "";
-}
 
 /*Media query for smaller desktop screens and smaller */
 @media screen and (max-width: 980px) {
@@ -597,28 +521,42 @@ body p {
       text-align: center;
       width: 100%;
   }
-  .hero-cta, .hero-form {
+  .hero-cta, .hero-form, .web-experience {
       width: 100%;
   }
-  .hero-cta {
+  .hero-cta, .web-experience {
       text-align: center;
       text-shadow:0 0 10px rgba(0, 0, 0, 0.5);
   }
   .section-title {
       width: 80%;
   }
-  .trainer {
+  .work {
       flex: 0 70%;
   }
-  .contact-info iframe {
-      flex: 1 100%;
-  }
+
 }
 /*Media query for tablets and smaller*/
 @media screen and (max-width: 768px) {
    section {
     padding: 30px 15px;
    }
+   .intro{
+    margin-top: 150px;
+}
+.footer {
+    padding-top: 0%;
+}
+
+.hero-form img {
+    position: relative;
+    top: 0px;
+    left: -50px;
+    height: auto;
+    width: auto;
+    max-width: 120px;
+    max-height: 120px;
+ }
    .step h3 {
        flex: 1 100%;
        text-align: center;
@@ -638,20 +576,25 @@ body p {
    .step-text {
        flex: 100%;
    }
+   .steps h4 {
+    font-size: 15px;
+}
 }
 
 /*Media query for mobile phones and smaller */
 @media screen and (max-width: 575px) {
-    .hero-form button {
-        width: 100%;
-    }
+    
     .section-title {
         width: 95%;
+    }
+    .intro{
+        padding-top: 140px;
     }
     .intro p {
         width: 100%;
     }
-    .trainer {
+    
+    .work {
         flex: 0 100%;
     }
     .contact-info {
@@ -660,7 +603,5 @@ body p {
     .contact-info > * {
         flex: 0 100%;
     }
-    .contact-form {
-        order: 3;
-    }
+    
 }
